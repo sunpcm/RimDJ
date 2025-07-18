@@ -1,0 +1,7 @@
+*.pyc
+__pycache__
+Spark-TTS/
+Spark-TTS-0.5B/
+spark-tts-merged/
+spark-tts-tensorrt/
+trt_engines/
