@@ -4,3 +4,8 @@ Spark-TTS-0.5B/
 spark-tts-merged/
 spark-tts-tensorrt/
 trt_engines/
+.ipynb_checkpoints/
+unsloth_compiled_cache/
+outputs/
+lora_model_*/
+generated_speech_controllable.wav
