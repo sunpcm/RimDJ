@@ -10,3 +10,5 @@ outputs/
 lora_model_*/
 generated_speech_controllable.wav
 model.cache
+usecase.ipynb
+concatenated_audio.wav

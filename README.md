@@ -72,12 +72,18 @@ docker run -it --rm --gpus all -v /d/code/RimDJ:/workspace sparktts-unsloth pyth
 # trtllm-build --checkpoint_dir ./spark-tts-tensorrt --output_dir ./trt_engines/spark-tts-tensorrt/bf16/1-gpu --gemm_plugin bfloat16
 # 这里使用docker命令运行转换脚本和编译命令
 docker run -it --rm --gpus all -v /d/code/RimDJ:/workspace sparktts-unsloth trtllm-build --checkpoint_dir ./spark-tts-tensorrt --output_dir ./trt_engines/spark-tts-tensorrt/bf16/1-gpu --gemm_plugin bfloat16
+
+# 对4060ti 16G的编译命令
+# docker run -it --rm --gpus all -v /d/code/RimDJ:/workspace sparktts-unsloth trtllm-build --checkpoint_dir ./spark-tts-tensorrt --output_dir ./trt_engines/spark-tts-tensorrt/bf16/1-gpu --gemm_plugin bfloat16 --max_input_len=1024 --max_seq_len=4096 --max_batch_size=1
 ```
 
 ## Docker运行环境
 ```bash
 # 运行本地镜像
 docker run -it --name RimDJ-runtime --gpus all -p 8889:8889 -v /d/code/RimDJ:/workspace sparktts-unsloth python server/server.py
+
+# 如需调试tensorRT环境可使用临时容器
+docker run -it --rm --gpus all -p 8887:8888 -v /d/code/RimDJ:/workspace sparktts-unsloth
 ```
 
 ## 使用说明
