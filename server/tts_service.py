@@ -243,6 +243,7 @@ class TTSService(AsyncServiceBase):
                     raise ValueError("生成的音频为空")
                     
             except Exception as e:
+                text = text + "。"
                 if attempt == max_retries - 1:  # 最后一次尝试
                     raise e
                 

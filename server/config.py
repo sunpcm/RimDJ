@@ -25,7 +25,7 @@ BROADCAST_QUEUE_SIZE = 50
 WAV_QUEUE_SIZE = 100  # 增加WAV队列容量，避免BGM音频块丢失
 BGM_WAV_QUEUE_SIZE = 1000  # BGM专用WAV队列容量，增加以支持快速生成模式
 MIXED_WAV_QUEUE_SIZE = 200  # 混合音频队列容量
-MP3_QUEUE_SIZE = 300
+MP3_QUEUE_SIZE = 1000
 CLIENT_QUEUE_SIZE = 300  # 增加客户端队列容量
 
 # Timeout configuration (seconds)
